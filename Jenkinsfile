@@ -1,6 +1,6 @@
 pipeline{
   agent any
-  enviroment{
+  environment{
     SONAR_HOME= tool "Sonar"
   }
   stages{
