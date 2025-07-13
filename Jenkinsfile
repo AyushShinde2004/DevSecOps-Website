@@ -18,8 +18,8 @@ pipeline{
     }
     stage("Owsp Dc"){
       steps{
-        dependancyCheck additionalArguments: '--scan ./', odcInstallation: 'Dc'
-        dependancyCheckPublisher pattern: '**/dependancy-check-report.xml'
+        dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'Dc'
+        dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
       }
     }
     stage("Sonar Quality Gate"){
