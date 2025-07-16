@@ -8,6 +8,8 @@ const postSchema = new Schema({
   description: String,
   isFeaturedPost: Boolean,
   timeOfPost: { type: Date, default: Date.now },
+}, {
+  collection: 'posts' // ✅ Force correct Mongo collection
 });
 
 export default model('Post', postSchema);
